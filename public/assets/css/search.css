@@ -1,0 +1,12 @@
+.search-link-product:hover{
+	text-decoration: none;
+}
+.search-img-product{
+	width: 100%;
+	max-width: 100%;
+	height: 30vw;
+	max-height: 200px;
+	background-size: cover;
+	background-repeat: none;
+	background-position: center center;
+}

@@ -1,0 +1,37 @@
+.img-preview {
+	max-width: 125px;
+	max-height: 125px;
+}
+.cart-float-left {
+	margin-left: 25px;
+	float: left;
+}
+.cart-product-name {
+	font-size: 17px;
+	color: #0066c0;
+}
+.cart-product-name a:hover {
+	color: #c45500;
+	cursor: pointer;
+}
+.cart-product-delete {
+	font-size: 12px;
+	color: #0066c0;
+}
+.cart-product-delete:hover {
+	color: #c45500;
+	cursor: pointer;
+}
+.cart-product-price {
+	font-size: 17px;
+	font-weight: 700;
+	color: #B12704;
+}
+.cart-subtotal {
+	font-size: 17px;
+	font-weight: 700;
+}
+.cart-policies {
+	font-size: 12px;
+	margin-bottom: 0px;
+}

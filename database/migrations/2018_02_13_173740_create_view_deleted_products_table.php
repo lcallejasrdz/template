@@ -1,0 +1,85 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateViewDeletedProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        DB::statement("
+            CREATE VIEW view_deleted_products AS
+            (
+                SELECT
+                    products.id,
+                    product_modules.name as product_module_id,
+                    users.commercial_name as user_id,
+                    categories.name as category_id,
+                    subcategories.name as subcategory_id,
+                    products.name,
+                    products.slug,
+                    products.description,
+                    products.price,
+                    percent_buys.name as percent_buy_id,
+                    product_unities.name as product_unity_id,
+                    products.img_1,
+                    products.img_2,
+                    products.img_3,
+                    products.img_4,
+                    products.img_5,
+                    product_types.name as product_type_id,
+                    products.inventory,
+                    products.min_buy,
+                    preparation_times.name as preparation_time_id,
+                    restocked_times.name as restocked_time_id,
+                    products.monday_init,
+                    products.monday_finish,
+                    products.tuesday_init,
+                    products.tuesday_finish,
+                    products.wednesday_init,
+                    products.wednesday_finish,
+                    products.thursday_init,
+                    products.thursday_finish,
+                    products.friday_init,
+                    products.friday_finish,
+                    products.saturday_init,
+                    products.saturday_finish,
+                    products.sunday_init,
+                    products.sunday_finish,
+                    statuses.name as status_id,
+                    products.created_at
+
+                FROM `products`
+                    JOIN product_modules ON product_modules.id = products.product_module_id
+                    JOIN users ON users.id = products.user_id
+                    JOIN categories ON categories.id = products.category_id
+                    JOIN subcategories ON subcategories.id = products.subcategory_id
+                    LEFT JOIN percent_buys ON percent_buys.id = products.percent_buy_id
+                    JOIN product_unities ON product_unities.id = products.product_unity_id
+                    JOIN product_types ON product_types.id = products.product_type_id
+                    JOIN preparation_times ON preparation_times.id = products.preparation_time_id
+                    JOIN restocked_times ON restocked_times.id = products.restocked_time_id
+                    JOIN statuses ON statuses.id = products.status_id
+
+                WHERE products.product_module_id = 1
+                    AND products.deleted_at IS NOT NULL
+            )
+        ");
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        DB::statement('DROP VIEW IF EXISTS view_deleted_products');
+    }
+}
