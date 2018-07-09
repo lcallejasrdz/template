@@ -6,15 +6,17 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-sm-12">
-            <h1>{{ trans($active.'.title') }}</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>{{ trans($active.'.title') }}</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-			{{ Form::token() }}
-			@include('admin.modules.datatable')
+        <div class="row">
+            <div class="col-md-12">
+                {{ Form::token() }}
+                @include('admin.modules.datatable')
+            </div>
         </div>
     </div>
 @endsection
