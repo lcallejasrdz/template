@@ -34,7 +34,7 @@
 								<tr>
 									<td>
 										<a href="{{ URL::to('search/'.$item->slug) }}" class="cart-float-left">
-											<img src="{{ URL::to('uploads/suppliers/products/'.\App\Product::find($item->id)->img_1) }}" alt="Product" class="img-preview">
+											<img src="{{ URL::to('uploads/suppliers/products/'.\App\Product::find($item->id)->img_1) }}" alt="{{ $item->name }}" class="img-preview">
 										</a>
 										<div class="cart-float-left">
 											<p><span class="cart-product-name"><a href="{{ URL::to('search/'.\App\Product::find($item->id)->slug) }}">{{ \App\Product::find($item->id)->name }}</a></span></p>

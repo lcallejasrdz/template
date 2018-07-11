@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <h1>{{ trans($active.'.title') }}</h1>
@@ -23,7 +23,7 @@
                     @foreach($products as $product)
                         <div class="col-xs-6 col-md-4 text-center">
                             <a href="{{ URL::route('detail', [$product->slug]) }}" class="search-link-product">
-                                <div class="search-img-product" style="background-image: url('{{ URL::to('uploads/suppliers/products/'.$product->img_1) }}')">
+                                <div class="search-img-product" style="background-image: url('{{ URL::to('uploads/suppliers/products/'.$product->img_1) }}'), url('http://place-hold.it/300x500?text={{ $product->name  }}');">
                                     
                                 </div>
                                 <p>{{ $product->name }}</p>
