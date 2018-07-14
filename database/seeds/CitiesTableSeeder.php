@@ -15,7 +15,7 @@ class CitiesTableSeeder extends Seeder
 
 		DB::table('cities')->insert([
 			'state_id' => 1,
-			'name' => 'Cuautitlán Izcalli'
+			'name' => 'Adolfo López Mateos'
 		]);
     }
 }

@@ -14,7 +14,7 @@ class MembershipsTableSeeder extends Seeder
 		DB::table('memberships')->truncate();
 
 		DB::table('memberships')->insert([
-			'name' => 'Membresía UNO',
+			'name' => 'Básico',
 			'quantity' => 1000,
 			'monthly_cost' => 500,
 			'annual_cost' => 5000

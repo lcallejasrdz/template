@@ -14,7 +14,7 @@ class CategoriesTableSeeder extends Seeder
 		DB::table('categories')->truncate();
 
 		DB::table('categories')->insert([
-			'name' => 'Música'
+			'name' => 'Alimentos'
 		]);
     }
 }

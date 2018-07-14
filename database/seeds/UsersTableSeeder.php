@@ -22,17 +22,7 @@ class UsersTableSeeder extends Seeder
 		    'slug' 									=> Str::slug('Eduardo Callejas 1'),
 			'first_name' 							=> 'Eduardo',
             'last_name' 							=> 'Callejas',
-            'email' 								=> 'lcallejas@fabricadesoluciones.com',
-            'password' 								=> 'asdasd',
-            'role_id' 								=> 1,
-            'status_id' 							=> 1,
-		));
-
-		$admin_2 = Sentinel::registerAndActivate(array(
-		    'slug' 									=> Str::slug('Juan Gómez 2'),
-			'first_name' 							=> 'Karla',
-            'last_name' 							=> 'Reyes',
-            'email' 								=> 'kreyes@fabricadesoluciones.com',
+            'email' 								=> 'lcallejasrdz@gmail.com',
             'password' 								=> 'asdasd',
             'role_id' 								=> 1,
             'status_id' 							=> 1,
@@ -42,7 +32,7 @@ class UsersTableSeeder extends Seeder
 		    'slug' 									=> Str::slug('Jorge Hernández 3'),
 			'first_name'							=> 'Jorge',
 	        'last_name'								=> 'Hernández',
-	        'email'									=> 'jhernandez@fabricadesoluciones.com',
+	        'email'									=> 'jhernandez@algo.com',
 	        'password'								=> 'asdasd',
 	        'gender_id'								=> 1,
 	        'birthdate'								=> '1991-08-21',
@@ -52,25 +42,11 @@ class UsersTableSeeder extends Seeder
 	        'status_id'								=> 1,
 		));
 
-		$customer_2 = Sentinel::registerAndActivate(array(
-		    'slug' 									=> Str::slug('Eduardo Callejas 4'),
-			'first_name'							=> 'Eduardo',
-	        'last_name'								=> 'Callejas',
-	        'email'									=> 'lcallejasrdz@gmail.com',
-	        'password'								=> 'asdasd',
-	        'gender_id'								=> 1,
-	        'birthdate'								=> '1991-08-21',
-	        'phone'									=> '58614681',
-	        'cellphone'								=> '5515118990',
-	        'role_id'								=> 5,
-	        'status_id'								=> 1,
-		));
-
 		$supplier_1 = Sentinel::registerAndActivate(array(
 		    'slug' 									=> Str::slug('Programación Ramírez'),
 			'first_name'							=> 'Iván',
 	        'last_name'								=> 'Ramirez',
-	        'email'									=> 'iramirez@fabricadesoluciones.com',
+	        'email'									=> 'iramirez@gmail.com',
 	        'password'								=> 'asdasd',
 	        'phone'									=> '50161705',
 	        'cellphone'								=> '5550161705',
@@ -87,9 +63,9 @@ class UsersTableSeeder extends Seeder
 	        'social_reason'							=> 'Programación Ramírez S.A. de C.V.',
 	        'commercial_name'						=> 'Programación Ramírez',
 	        'person_type_id'						=> 1,
-	        'web_site'								=> 'http://fabricadesoluciones.com/',
+	        'web_site'								=> 'http://iramirez.com/',
 	        'logo'									=> 'ivan.jpg',
-	        'email_paypal'							=> 'iramirez@fabricadesoluciones.com',
+	        'email_paypal'							=> 'iramirez@gmail.com',
 	        'legal_representant'					=> 'Iván Ramírez',
 	        'date_public_writing'					=> '2010-01-01',
 	        'no_public_notary'						=> '13',
@@ -100,45 +76,6 @@ class UsersTableSeeder extends Seeder
 	        'legal_representative_identification'	=> 'ivanine.pdf',
 	        'address_proof'							=> 'ivancomprobante.pdf',
 	        'policies'								=> 'ivanpoliticas.pdf',
-	        'membership_id'							=> 1,
-	        'role_id'								=> 4,
-	        'status_id'								=> 1,
-		));
-
-		$supplier_2 = Sentinel::registerAndActivate(array(
-		    'slug' 									=> Str::slug('Programación Rodríguez'),
-			'first_name'							=> 'Enrique',
-	        'last_name'								=> 'Rodríguez',
-	        'email'									=> 'erodriguez@fabricadesoluciones.com',
-	        'password'								=> 'asdasd',
-	        'phone'									=> '50161705',
-	        'cellphone'								=> '5550161705',
-	        'country_id'							=> 1,
-	        'state_id'								=> 1,
-	        'city_id'								=> 1,
-	        'municipality'							=> 'Atizapán de Zaragoza',
-	        'colony'								=> 'Lomas de San Miguel Norte',
-	        'street'								=> 'Dominicos',
-	        'no_ext'								=> '11',
-	        'no_int'								=> '',
-	        'postal_code'							=> '52928',
-	        'rfc'									=> 'ROEN9108217G3',
-	        'social_reason'							=> 'Programación Rodríguez S.A. de C.V.',
-	        'commercial_name'						=> 'Programación Rodríguez',
-	        'person_type_id'						=> 1,
-	        'web_site'								=> 'http://fabricadesoluciones.com/',
-	        'logo'									=> 'enrique.jpg',
-	        'email_paypal'							=> 'erodriguez@fabricadesoluciones.com',
-	        'legal_representant'					=> 'Enrique Rodríguez',
-	        'date_public_writing'					=> '2010-01-01',
-	        'no_public_notary'						=> '13',
-	        'entity_public_notary'					=> 'Tampico, Tamaulipas',
-	        'inscription_folio'						=> '13434',
-	        'constitutive_act'						=> 'enriqueacta.pdf',
-	        'hacienda_register'						=> 'enriqueregistro.pdf',
-	        'legal_representative_identification'	=> 'enriqueine.pdf',
-	        'address_proof'							=> 'enriquecomprobante.pdf',
-	        'policies'								=> 'enriquepoliticas.pdf',
 	        'membership_id'							=> 1,
 	        'role_id'								=> 4,
 	        'status_id'								=> 1,
@@ -175,12 +112,9 @@ class UsersTableSeeder extends Seeder
 		]);
 
 		$admin_1->roles()->attach($adminRole);
-		$admin_2->roles()->attach($adminRole);
 		$customer_1->roles()->attach($customerRole);
-		$customer_2->roles()->attach($customerRole);
 		$supplier_1->roles()->attach($supplierRole);
-		$supplier_2->roles()->attach($supplierRole);
 
-		$this->command->info('Admin User created with username lcallejas@fabricadesoluciones.com and password asdasd');
+		$this->command->info('Admin User created with username lcallejasrdz@gmail.com and password asdasd');
     }
 }
